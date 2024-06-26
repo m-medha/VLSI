@@ -1,0 +1,49 @@
+Circuit: *** SPICE deck for cell nand{lay} from library NAND
+
+Error on line 8 : mnmos net@5 a gnd nmos_n-trans-well n l=0.6u w=3u as=11.385p ad=1.688p ps=17.55u pd=4.65u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 9 : mnmos@1 gnd aandb net@5 nmos@1_n-trans-well nmos l=0.6u w=3u as=1.688p ad=11.385p ps=4.65u pd=17.55u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 10 : mpmos@0 gnd a vdd pmos@0_p-trans-well pmos l=0.6u w=3u as=13.725p ad=11.385p ps=19.5u pd=17.55u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 11 : mpmos@1 vdd aandb gnd pmos@1_p-trans-well pmos l=0.6u w=3u as=11.385p ad=13.725p ps=17.55u pd=19.5u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Vb: Removing PWL point (5e-008,5)
+WARNING: Node NMOS_N-TRANS-WELL is floating.
+WARNING: Node AANDB is floating.
+WARNING: Node NMOS@1_N-TRANS-WELL is floating.
+WARNING: Node PMOS@0_P-TRANS-WELL is floating.
+WARNING: Node PMOS@1_P-TRANS-WELL is floating.
+
+WARNING: Less than two connections to node B.  This node is used by VB.
+Direct Newton iteration for .op point succeeded.
+
+Multiply defined .measure result:  tf   
+
+  Each .measure statement needs a unique result name.
+
+Date: Mon Jun 24 16:42:06 2024
+Total elapsed time: 2.901 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2174
+traniter = 2149
+tranpoints = 1074
+accept = 1074
+rejected = 0
+matrix size = 12
+fillins = 0
+solver = Normal
+Matrix Compiler1: 526 bytes object code size  0.4/0.2/[0.1]
+Matrix Compiler2: off  [0.2]/0.3/0.2
+

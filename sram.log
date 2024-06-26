@@ -1,0 +1,54 @@
+Circuit: *** SPICE deck for cell sram{lay} from library SRAM
+
+Error on line 9 : mnmos@1 gnd net@35 net@6 gnd_2 noms l=0.4u w=2u as=3.62p ad=4.62p ps=11.4u pd=14.4u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+V4: Removing PWL point (3e-009,0)
+WARNING: Node NET@32 is floating.
+WARNING: Node GND_2 is floating.
+WARNING: Node NET@35 is floating.
+
+WARNING: Less than two connections to node NET@5.  This node is used by MNMOS@0.
+WARNING: Less than two connections to node NET@6.  This node is used by MNMOS@1.
+Instance "mpmos@1": Length shorter than recommended for a level 1 MOSFET.
+Instance "mpmos@1": Width narrower than recommended for a level 1 MOSFET.
+Instance "mpmos@0": Length shorter than recommended for a level 1 MOSFET.
+Instance "mpmos@0": Width narrower than recommended for a level 1 MOSFET.
+Instance "mnmos@3": Length shorter than recommended for a level 1 MOSFET.
+Instance "mnmos@3": Width narrower than recommended for a level 1 MOSFET.
+Instance "mnmos@2": Length shorter than recommended for a level 1 MOSFET.
+Instance "mnmos@2": Width narrower than recommended for a level 1 MOSFET.
+Instance "mnmos@0": Length shorter than recommended for a level 1 MOSFET.
+Instance "mnmos@0": Width narrower than recommended for a level 1 MOSFET.
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.05635e-010 to 1.05644e-010
+Heightened Def Con from 6.05635e-010 to 6.05644e-010
+Heightened Def Con from 1.10564e-009 +++++++++++to 1.10564e-009
+Heightened Def Con from 1.60564e-009 to 1.60564e-009
+Heightened Def Con from 2.10564e-009 +++++++++++to 2.10564e-009
+Heightened Def Con from 3.60564e-009 +++++++++++to 3.60564e-009
+Heightened Def Con from 4.10564e-009 +++++++++++to 4.10564e-009
+Heightened Def Con from 5.60564e-009 +++++++++++to 5.60564e-009
+Heightened Def Con from 6.10564e-009 to 6.10564e-009
+Heightened Def Con from 6.60564e-009 to 6.60564e-009
+Heightened Def Con from 7.10564e-009 +++++++++++to 7.10564e-009
+Heightened Def Con from 7.60564e-009 +++++++++++to 7.60564e-009
+
+Date: Tue Jun 25 22:54:23 2024
+Total elapsed time: 2.376 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 17350
+traniter = 17326
+tranpoints = 3054
+accept = 1938
+rejected = 1205
+matrix size = 18
+fillins = 4
+solver = Normal
+Matrix Compiler1: 1.58 KB object code size  0.5/0.2/[0.2]
+Matrix Compiler2: off  [0.2]/0.3/1.1
+

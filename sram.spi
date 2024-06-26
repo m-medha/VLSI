@@ -1,0 +1,49 @@
+*** SPICE deck for cell sram{lay} from library SRAM
+*** Created on Tue Jun 25, 2024 22:32:56
+*** Last revised on Tue Jun 25, 2024 22:54:05
+*** Written on Tue Jun 25, 2024 22:54:19 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: sram{lay}
+Mnmos@0 net@5 net@32 gnd gnd_2 NMOS L=0.4U W=2U AS=4.62P AD=3.62P PS=14.4U PD=11.4U
+Mnmos@1 gnd net@35 net@6 gnd_2 NOMS L=0.4U W=2U AS=3.62P AD=4.62P PS=11.4U PD=14.4U
+Mnmos@2 net@1 WL BL gnd_2 NMOS L=0.4U W=2U AS=3.62P AD=3.62P PS=11.4U PD=11.4U
+Mnmos@3 BLB WL net@2 gnd_2 NMOS L=0.4U W=2U AS=3.62P AD=3.62P PS=11.4U PD=11.4U
+Mpmos@0 net@1 net@32 vdd vdd PMOS L=0.4U W=2U AS=15.62P AD=3.62P PS=28U PD=11.4U
+Mpmos@1 vdd net@35 net@2 vdd PMOS L=0.4U W=2U AS=3.62P AD=15.62P PS=11.4U PD=28U
+
+* Spice Code nodes in cell cell 'sram{lay}'
+M1 Q QB 0 0 NMOS
+M2 QB Q 0 0 NMOS
+M3 Q WL BLB 0 NMOS
+M4 BL WL QB 0 NMOS
+M5 N001 QB Q N001 PMOS
+M6 N001 Q QB N001 PMOS
+Vdd N001 0 0.85
+V2 BL 0 PULSE(0 850m 100p 10p 10p 490p 1n)
+V3 BLB 0 PULSE(850m 0 100p 10p 10p 490p 1n)
+V4 WL 0 PWL(0 850m 2.49n 850m 2.5n 0 3n 0 3.01n 0 3.02n 850m)
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\MEDHA\OneDrive\Desktop\Electric Binary\180micron.txt
+.tran 8n
+.backanno
+.end
+M1 Q QB 0 0 NMOS
+M2 QB Q 0 0 NMOS
+M3 Q WL BLB 0 NMOS
+M4 BL WL QB 0 NMOS
+M5 N001 QB Q N001 PMOS
+M6 N001 Q QB N001 PMOS
+Vdd N001 0 0.85
+V2 BL 0 PULSE(0 850m 100p 10p 10p 490p 1n)
+V3 BLB 0 PULSE(850m 0 100p 10p 10p 490p 1n)
+V4 WL 0 PWL(0 850m 2.49n 850m 2.5n 0 3n 0 3.01n 0 3.02n 850m)
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\MEDHA\OneDrive\Desktop\Electric Binary\180micron.txt
+.tran 8n
+.backanno
+.end
+.END

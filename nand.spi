@@ -1,0 +1,22 @@
+*** SPICE deck for cell nand{lay} from library NAND
+*** Created on Mon Jun 24, 2024 16:04:17
+*** Last revised on Mon Jun 24, 2024 16:41:42
+*** Written on Mon Jun 24, 2024 16:42:02 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: nand{lay}
+MNMOS net@5 A gnd NMOS_n-trans-well N L=0.6U W=3U AS=11.385P AD=1.688P PS=17.55U PD=4.65U
+Mnmos@1 gnd AandB net@5 nmos@1_n-trans-well NMOS L=0.6U W=3U AS=1.688P AD=11.385P PS=4.65U PD=17.55U
+Mpmos@0 gnd A vdd pmos@0_p-trans-well PMOS L=0.6U W=3U AS=13.725P AD=11.385P PS=19.5U PD=17.55U
+Mpmos@1 vdd AandB gnd pmos@1_p-trans-well PMOS L=0.6U W=3U AS=11.385P AD=13.725P PS=17.55U PD=19.5U
+
+* Spice Code nodes in cell cell 'nand{lay}'
+vdd vdd 0 DC 5
+va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5
+vb B 0 DC pwl 10n 0 20n 5 50n 5 100n 5 110n 0
+.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1
+.measure tran tf trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1
+.tran 0 200n
+.include C:\Users\MEDHA\OneDrive\Desktop\Electric Binary\180micron.txt
+.END

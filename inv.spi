@@ -1,0 +1,20 @@
+*** SPICE deck for cell inv{lay} from library Inverter
+*** Created on Mon Jun 24, 2024 13:02:54
+*** Last revised on Mon Jun 24, 2024 13:27:26
+*** Written on Mon Jun 24, 2024 13:27:34 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: inv{lay}
+Mnmos@0 out in gnd gnd NMOS L=0.6U W=3U AS=17.1P AD=5.85P PS=27.9U PD=9.9U
+Mpmos@0 out in vdd vdd PMOS L=0.6U W=3U AS=19.35P AD=5.85P PS=28.5U PD=9.9U
+
+* Spice Code nodes in cell cell 'inv{lay}'
+vdd vdd 0 DC 5
+vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0
+cload out 0 250fF
+.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1
+.measure tran tf trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1
+.tran 0 1us
+.include C:\Users\MEDHA\OneDrive\Desktop\Electric Binary\180micron.txt
+.END

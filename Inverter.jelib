@@ -1,0 +1,73 @@
+# header information:
+HInverter|9.07
+
+# Views:
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0
+
+# Cell inv;1{lay}
+Cinv;1{lay}||mocmos|1719214374513|1719215846998||DRC_last_good_drc_area_date()G1719215465838|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1719215465838
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-10|5||5||
+NMetal-1-P-Active-Con|contact@1||0|5||5||
+NMetal-1-N-Active-Con|contact@2||-10|-20|5||R|
+NMetal-1-N-Active-Con|contact@3||0|-20|5||R|
+NMetal-1-Polysilicon-1-Con|contact@4||-40|-5||||
+NN-Transistor|nmos@0||-5|-20|7||R||SIM_spice_model(D5G1;)SNMOS
+NPolysilicon-1-Pin|pin@0||-5|-5||||
+NPolysilicon-1-Pin|pin@1||-30|-5||||
+NMetal-1-Pin|pin@2||0|-5||||
+NMetal-1-Pin|pin@3||30|-5||||
+Ngeneric:Invisible-Pin|pin@4||-70|-20|||||SIM_spice_card(D5G2;)S[vdd vdd 0 DC 5,vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tf trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 1us,".include C:\\Users\\MEDHA\\OneDrive\\Desktop\\Electric Binary\\180micron.txt"]
+NP-Transistor|pmos@0||-5|5|7||R||SIM_spice_model(D5G1;)SPMOS
+NMetal-1-P-Well-Con|substr@0||-5|-35|20|||
+NMetal-1-N-Well-Con|well@0||-5|20|20|1||
+AP-Active|net@0|||S1800|pmos@0|diff-bottom|-1.25|5|contact@1||0|5
+AP-Active|net@1|||S0|pmos@0|diff-top|-8.75|5|contact@0||-10|5
+AN-Active|net@2|||S0|nmos@0|diff-top|-8.75|-20|contact@2||-10|-20
+AN-Active|net@3|||S0|contact@3||0|-20|nmos@0|diff-bottom|-1.25|-20
+AMetal-1|net@5||1|S900|well@0||-10|20|contact@0||-10|5
+AMetal-1|net@6||1|S900|contact@2||-10|-20|substr@0||-10|-35
+APolysilicon-1|net@8|||S900|pmos@0|poly-left|-5|-2|pin@0||-5|-5
+APolysilicon-1|net@9|||S900|pin@0||-5|-5|nmos@0|poly-right|-5|-13
+APolysilicon-1|net@10|||S0|pin@0||-5|-5|pin@1||-30|-5
+AMetal-1|net@11||1|S900|contact@1||0|5|pin@2||0|-5
+AMetal-1|net@12||1|S900|pin@2||0|-5|contact@3||0|-20
+AMetal-1|net@13||1|S1800|pin@2||0|-5|pin@3||30|-5
+APolysilicon-1|net@14|||S0|pin@1||-30|-5|contact@4||-40|-5
+Egnd||D5G2;|substr@0||U
+Ein||D5G2;|contact@4||U
+Eout||D5G2;|pin@3||U
+Evdd||D5G2;|well@0||U
+X
+
+# Cell inv;1{sch}
+Cinv;1{sch}||schematic|1719210890806|1719214035650|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-15|5||||
+NOff-Page|conn@1||15|5||||
+NGround|gnd@0||0|-10||||
+NTransistor|nmos@0||0|0|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;Y5;)SNMOS
+NWire_Pin|pin@0||0|12||||
+NWire_Pin|pin@1||2|-8||||
+NWire_Pin|pin@2||-1|5||||
+NWire_Pin|pin@3||2|5||||
+Ngeneric:Invisible-Pin|pin@4||-30|-5|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tf trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 0.1us,".include C:\\Users\\MEDHA\\OneDrive\\Desktop\\Electric Binary\\180micron.txt"]
+NTransistor|pmos@0||0|10|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;Y5;)SPMOS
+NPower|pwr@0||0|20||||
+Awire|net@0|||900|pwr@0||0|20|pin@0||0|12
+Awire|net@1|||0|pmos@0|d|2|12|pin@0||0|12
+Awire|net@3|||900|nmos@0|s|2|-2|pin@1||2|-8
+Awire|net@4|||1800|gnd@0||0|-8|pin@1||2|-8
+Awire|net@6|||900|pmos@0|g|-1|10|pin@2||-1|5
+Awire|net@7|||900|pin@2||-1|5|nmos@0|g|-1|0
+Awire|net@8|||1800|conn@0|y|-13|5|pin@2||-1|5
+Awire|net@9|||900|pmos@0|s|2|8|pin@3||2|5
+Awire|net@10|||900|pin@3||2|5|nmos@0|d|2|2
+Awire|net@11|||0|conn@1|a|13|5|pin@3||2|5
+Ein||D5G2;|conn@0|a|U
+Eout||D5G2;|conn@1|a|U
+X

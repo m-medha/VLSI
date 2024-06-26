@@ -1,0 +1,48 @@
+Circuit: *** SPICE deck for cell nor{lay} from library NOR
+
+Error on line 8 : mnmos@2 b a gnd nmos@2_n-trans-well nmos l=0.6u w=3u as=13.725p ad=4.35p ps=19.5u pd=6.9u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 9 : mnmos@3 gnd aorb b nmos@3_n-trans-well nmos l=0.6u w=3u as=4.35p ad=13.725p ps=6.9u pd=19.5u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 10 : mpmos@2 net@32 a vdd pmos@2_p-trans-well pmos l=0.6u w=3u as=21.6p ad=1.688p ps=29.1u pd=4.65u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 11 : mpmos@3 b aorb net@32 pmos@3_p-trans-well pmos l=0.6u w=3u as=1.688p ad=4.35p ps=4.65u pd=6.9u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Vb: Removing PWL point (5e-008,5)
+WARNING: Node NMOS@2_N-TRANS-WELL is floating.
+WARNING: Node AORB is floating.
+WARNING: Node NMOS@3_N-TRANS-WELL is floating.
+WARNING: Node PMOS@2_P-TRANS-WELL is floating.
+WARNING: Node PMOS@3_P-TRANS-WELL is floating.
+
+Direct Newton iteration for .op point succeeded.
+
+Multiply defined .measure result:  tf   
+
+  Each .measure statement needs a unique result name.
+
+Date: Mon Jun 24 17:00:48 2024
+Total elapsed time: 2.722 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2847
+traniter = 2821
+tranpoints = 1110
+accept = 1100
+rejected = 10
+matrix size = 12
+fillins = 0
+solver = Normal
+Matrix Compiler1: 598 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.09 KB object code size  0.1/0.2/[0.1]
+

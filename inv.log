@@ -1,0 +1,33 @@
+Circuit: *** SPICE deck for cell inv{lay} from library Inverter
+
+Error on line 8 : mnmos@0 out in gnd gnd nmos l=0.6u w=3u as=17.1p ad=5.85p ps=27.9u pd=9.9u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 9 : mpmos@0 out in vdd vdd pmos l=0.6u w=3u as=19.35p ad=5.85p ps=28.5u pd=9.9u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Direct Newton iteration for .op point succeeded.
+
+Multiply defined .measure result:  tf   
+
+  Each .measure statement needs a unique result name.
+
+Date: Mon Jun 24 13:27:37 2024
+Total elapsed time: 1.845 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2148
+traniter = 2123
+tranpoints = 1054
+accept = 1054
+rejected = 0
+matrix size = 5
+fillins = 0
+solver = Normal
+Matrix Compiler1: 132 bytes object code size  0.1/0.1/[0.0]
+Matrix Compiler2: 335 bytes object code size  0.1/0.1/[0.1]
+
